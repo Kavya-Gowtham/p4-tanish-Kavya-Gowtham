@@ -24,6 +24,7 @@ When user enters an URL in the browser, the below steps will happen.
 7. Server sends out an HTTP response along with the status of response.
 8. Browser displays HTML content
 
+
 Browser's high level components #
 
 1. The user interface:
@@ -40,6 +41,10 @@ Browser's high level components #
    Used to parse and execute JavaScript code.
 7. Data storage:
    This is a persistence layer. The browser may need to save all sorts of data locally, such as cookies. Browsers also support storage mechanisms such as localStorage, IndexedDB, WebSQL and FileSystem.
+   
+ Diagramatic flow of high level components of browser.  
+   
+   ![high level components](https://user-images.githubusercontent.com/62173639/180936385-eb7a4463-7481-4a53-960f-0cebeee733e9.png)
 
 When the browser gets the response from server successfully, The rendering engine will start getting the content of requested document from the networking layer.
 
@@ -67,6 +72,22 @@ The style information along with visual effects both in external css files and i
 Layout computes the exact position and size of each object.
 
 And last phase is paint,which takes in the final render tree and renders the pixels to the screen.
+
+![HTML Parsing](https://user-images.githubusercontent.com/62173639/180752620-5991a1f5-94dd-4390-ad62-a477aaf60d3b.png)
+![CSS parser](https://user-images.githubusercontent.com/62173639/180755315-6365dcbd-5b5a-48cb-aedd-ba6a04c61314.png)
+![render tree](https://user-images.githubusercontent.com/62173639/180934797-90132ad7-863e-4f93-94e3-f61afaeb5ed4.png)
+
+
+To construct the render tree, the browser roughly does the following:
+
+1. Starting at the root of the DOM tree, traverse each visible node.
+
+2. Some nodes are not visible (for example, script tags, meta tags, and so on), and are omitted since they are not reflected in the rendered output.
+3. Some nodes are hidden via CSS and are also omitted from the render tree; for example, the span node---in the example above---is missing from the render tree because we have an explicit rule that sets the "display: none" property on it.
+4. For each visible node, find the appropriate matching CSSOM rules and apply them.
+
+5.Emit visible nodes with content and their computed styles.
+
 
 SCRIPT PARSING
 The script processor executes Javascript code to process an event. The processor uses a pure Go implementation of ECMAScript 5.1 and has no external dependencies. This can be useful in situations where one of the other processors doesn’t provide the functionality you need to filter events.
