@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<body>
 		<h1>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</h1>
+        <section class="section">
 		<section class="left-section">			
 			<article class="paragraph">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
@@ -26,6 +27,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
 			</article>
 		</section>
+        </section>
 		<div class="clear"></div>
         <form>
 			<p>Title
@@ -58,10 +60,10 @@
 			</div>
 			<div class="field">
 				<label for="confirm_password" class="right-format">Confirm your password</label>
-				<input type="text" id="conf_password" name="confirm_password" required>
+				<input type="text" id="confirm_password" name="confirm_password" required>
 			</div>
-			<div class="field">
-				<label for="countries" class="right-format">Country</label>
+			<div class="dropdown">
+				<label for="countries" class="dropdown">Country</label>
 				<select name="countries" id="countries" required>
 					<option value="India">India</option>
 					<option value="America">America</option>
@@ -70,8 +72,8 @@
                     <option value="Newyork">Newyork</option>
 				</select>
 			</div>
-			<div class="field">
-				<input type="checkbox" id="terms" name="terms" required>
+			<div class="checkbox">
+				<input type="checkbox" id="terms" name="terms"  required>
 				<label for="terms"> I agree to the <a href="#"> terms and conditions</a></label>
 			</div>
 			<button type="submit" value="Submit" name="register" class="button">Sign Up</button>

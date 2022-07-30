@@ -43,10 +43,16 @@ h1 {
   margin-bottom: 5px;
 }
 
+.section {
+  display: flex;
+  flex-direction: row;
+}
 .left-section {
   margin-top: 10px;
   width: 46%;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .left-section .paragraph {
@@ -60,18 +66,23 @@ h1 {
 }
 .img {
   width: 70%;
-  height: 40%;
+  height: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.field {
+.field,
+.dropdown,
+.checkbox {
   margin-top: 25px;
+  display: flex;
+  flex-direction: row;
 }
 
-.right-format {
+.right-format,
+.dropdown {
   display: inline-block;
-  width: 120px;
+  padding-right: 10px;
 }
 
 .button {
@@ -99,4 +110,38 @@ h1 {
 
 .clear {
   clear: both;
+}
+@media only screen and (max-width: 920px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-section {
+    width: 100%;
+  }
+  .right-section {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  /* for widths less than or equal to 629 pixels */
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-section {
+    width: 100%;
+  }
+  .right-section {
+    width: 100%;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown,
+  .checkbox {
+    display: inline-block;
+    padding-right: 0px;
+  }
 }
