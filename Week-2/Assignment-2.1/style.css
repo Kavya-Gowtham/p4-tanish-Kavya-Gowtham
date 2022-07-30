@@ -7,7 +7,6 @@
   --green: #3e8e41;
   --light-green: #3e8e41;
   --medium-green: #04aa6d;
-  --grey: #999;
 
   --font-size: 24px;
   --font-family: Arial;
@@ -65,4 +64,39 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.field {
+  margin-top: 25px;
+}
+
+.right-format {
+  display: inline-block;
+  width: 120px;
+}
+
+.button {
+  margin-top: 25px;
+  padding: 15px 25px;
+  font-size: var(--font-size);
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--white);
+  background-color: var(--medium-green);
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: var(--light-green);
+}
+
+.button:active {
+  background-color: var(--green);
+  box-shadow: 0 5px;
+  transform: translateY(4px);
+}
+
+.clear {
+  clear: both;
 }
