@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Lorem ipsum</title>
+		<link rel="stylesheet" href="CSS/style.css"/>
+	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<body>
+		<!-- description of page title -->
+		<h1>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.</h1>
+        <section class="section">
+			<!-- left-section which contains the para and an image on the left side of page. -->
+		<section class="left-section">			
+			<article class="paragraph">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
+			</article>
+			<img src="https://www.w3schools.com/html/img_chania.jpg" alt="Flowers in Chania" class = "img">
+		</section>
+		<!--  Right side section to display the articles -->
+		<section class="right-section">
+			<article class="paragraph">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
+			</article>
+			<article class="paragraph">
+				<h3>Lorem ipsum dolor sit</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
+			</article>		
+			<article class="paragraph">
+				<h3>Lorem ipsum dolor sit</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique, sem id tincidunt dictum, odio lorem consequat ante, at ultricies nunc massa ac metus. Nam consequat eros libero, ac malesuada enim placerat non. Duis sed leo nisl. Nulla facilisi.</p>
+			</article>
+		</section>
+        </section>
+		<div class="clear"></div>
+
+		<!-- form which specifies all the details to mention before submitting-->
+        <form>
+			<p>Title
+		 	<input type="radio" id="mr" name="title" value="Mr" required>
+		 	<label for="mr">Mr</label>
+			<input type="radio" id="mrs" name="title" value="Mrs" required>
+		 	<label for="mrs">Mrs</label>
+			<input type="radio" id="miss" name="title" value="Miss" required>
+		 	<label for="miss">Miss</label>
+		 	</p>
+			<div class="field">
+				<label for="fname" class="right-format">First name</label>
+				<input type="text" id="fname" name="fname" required><br>
+			</div>
+			<div class="field">
+				<label for="lname" class="right-format">Last name</label>
+				<input type="text" id="lname" name="lname" required>
+			</div>
+			<div class="field">
+				<label for="email" class="right-format">Email</label>
+				<input type="text" id="email" name="email" required>
+			</div>
+			<div class="field">
+				<label for="phone" class="right-format">Phone number</label>
+				<input type="text" id="phone" name="phone" required>
+			</div>
+			<div class="field">
+				<label for="password" class="right-format">Password</label>
+				<input type="text" id="password" name="password" required>
+			</div>
+			<div class="field">
+				<label for="confirm_password" class="right-format">Confirm your password</label>
+				<input type="text" id="confirm_password" name="confirm_password" required>
+			</div>
+			<div class="dropdown">
+				<label for="countries" class="dropdown">Country</label>
+				<select name="countries" id="countries" required>
+					<option value="India">India</option>
+					<option value="America">America</option>
+					<option value="Australia">Australia</option>
+					<option value="Srilanka">Srilanka</option>
+                    <option value="Newyork">Newyork</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<input type="checkbox" id="terms" name="terms"  required>
+				<label for="terms"> I agree to the <a href="#"> terms and conditions</a></label>
+			</div>
+			<button type="submit" value="Submit" name="register" class="button">Sign Up</button>
+		</form>
+    </body>
+ </html>       
