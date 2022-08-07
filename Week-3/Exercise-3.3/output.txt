@@ -22,8 +22,9 @@ log();// What is logged?
 Output: count is 0
 
 
-Here first createIncrement function is called and initialize count to 0, sets the message value to 0
+/*Here first createIncrement function is called and initialize count to 0, sets the message value to 0
 Because we didnt call increment or log function yet. So the message value will be count is 0.
 after that execution we are calling increment 3 times... the count value is incrementing but 
-we are not setting that updated value to message. so the message variable remains same with initial value. and then we are calling log function which displays message value of 0.
+we are not setting that updated value to message. so the message variable remains same with 
+initial value and then we are calling log function which displays message value of 0.*/
 
