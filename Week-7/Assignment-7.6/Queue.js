@@ -1,49 +1,45 @@
-class Queue{
-	
-    constructor()
-    {
-        this.s1 = [];
-        this.s2 = [];
+class Queue {
+    constructor() {
+      this.stack1 = [];
+      this.stack2 = [];
     }
-    
-    enqueue(x)
-    {
-        while (this.s1.length != 0)
-        {
-            this.s2.push(this.s1.pop());
-        }
-    
-        this.s1.push(x);
-    
-        while (this.s2.length != 0)
-        {
-            this.s1.push(this.s2.pop());
-        }
+  
+    // enQueue before inserting into stack1 pop everything into stack2
+    // then push into stack1 and pop everything from stack2 back to stack1
+    enQueue(x) {
+      while (this.stack1.length != 0) {
+        this.stack2.push(this.stack1.pop());
+      }
+  
+      this.stack1.push(x);
+  
+      while (this.stack2.length != 0) {
+        this.stack1.push(this.stack2.pop());
+      }
     }
-    
-    dequeue()
-    {
-    
-        if (this.s1.length == 0)
-        {
-            document.write("Q is Empty");
-        }
-    
-        let x = this.s1[this.s1.length - 1];
-        this.s1.pop();
-        return x;
+  
+    // deQueue  just pops out the element from stack1
+    deQueue() {
+      if (this.stack1.length == 0) {
+        return -1;
+      }
+      let num = this.stack1[this.stack1.length - 1];
+      this.stack1.pop();
+      return num;
     }
+  }
+  
+  let que = new Queue();
+  let arr = [1, 2, 2, 2, 1, 4];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      que.enQueue(arr[i + 1]);
+      i++;
+    } else if (arr[i] == 2) {
+      console.log(que.deQueue());
     }
-    
-    let q = new Queue();
-    q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(1);
-    q.enqueue(3);
-    q.enqueue(2);
-    q.enqueue(1);
-    q.enqueue(4);
-    q.enqueue(2);
-    
-    document.write(q.dequeue());
-    document.write(q.dequeue());
+  }
+  
+  //Time Complexity: push -> O(N)   pop -> O(1)
+  //Auxiliary Space: O(N)
