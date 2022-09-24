@@ -17,6 +17,19 @@ function App() {
 const clearList = () =>{
   setTasks([])
 }
+const removeTodo = (id) => {
+  console.log(id)
+  setTasks(tasks.filter(task => task.id !== id))
+}
+
+
+const completeTodo = (id) => {
+  console.log("complete",id,tasks)
+  const newTodos = [...tasks];
+  newTodos[id].isDone = true;
+  setTasks(newTodos);
+  }
+
   return (
     <div className="container">
     <div className="app-wrapper">
@@ -25,7 +38,7 @@ const clearList = () =>{
       </div>
       <div className="main">
       <TodoForm addTodo={addTodo} clearList={clearList}/>
-      <TodoList tasks={tasks}/>
+      <TodoList tasks={tasks} removeTodo={removeTodo} completeTodo={completeTodo}/>
       </div>
     </div>
   </div>
