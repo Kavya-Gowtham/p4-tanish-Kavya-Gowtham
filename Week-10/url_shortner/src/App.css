@@ -1,0 +1,92 @@
+:root {
+    --bright-gray-color: #d7eeec;
+    --white-color: #ffffff;
+    --blue-color: #0014ff;
+    --vampire-black: #080808;
+    --large-font: 22px;
+  }
+  
+  .App {
+    width: 100%;
+    height: 100vh;
+    background: var(--bright-gray-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+  .App .page-content {
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+ 
+.linkform-container form input {
+    height: 30px;
+    margin: 10px;
+    text-indent: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+  }
+  
+ .linkform-container form button {
+    height: 30px;
+    margin: 10px;
+    padding: 0px 20px;
+    color: var(--vampire-black);
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .linkform-container form button:hover {
+    cursor: pointer;
+  }
+  
+.link-container h1 {
+    color: var(--blue-color);
+    margin: 40px 0px 0px 0px;
+  }
+  
+.link-container h4 {
+    color: var(--vampire-black);
+    margin: 5px;
+    font-weight: normal;
+  }
+  
+.linklist-container {
+    padding: 20px;
+    margin: 40px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+  }
+  
+  .shorted-link-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+  }
+  
+  .shorted-link-card i {
+    margin: 15px;
+    cursor: pointer;
+    font-size: var(--large-font);
+  }
+  
+.shorted-link-card p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+  }
+  
